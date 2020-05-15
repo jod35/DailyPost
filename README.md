@@ -16,9 +16,9 @@ The project was built using Python3 and the following technologies
 
 ## Running the Application
 
-### 1. Clone the repo
-`
 
-##  2.Run the application 
-` 
+- clone this repo ` git clone https://github.com/jod35/DailyPost.git ` 
+- enter the project directory ` cd DailyPost `
+- install dependencies ` pip install -r requirements.txt ` 
+- run the project ` python3 manage.py runserver`
 
