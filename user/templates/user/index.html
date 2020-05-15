@@ -1,0 +1,15 @@
+{% extends 'user/base.html' %}
+
+
+{% block body %}
+    <h3>Recent Stories</h3>
+    {% for story in posts %}
+       <div class="post">
+            <h1 class="post-title">{{story.title}}</h1> by <small class="post-content">{{story.author}}</small>
+            <p>{{story.content}}</p>
+       </div>
+       <br>
+    {% endfor %}
+{% endblock body %}
+    
+       

@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="{% static 'user/main.css' %}">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">    {% if title %}
+       <title> DailyPost | {{title}}</title>
+    {% else %}
+        <title>DailyPost</title>
+    {% endif %}
+        
+</head>
+<body>
+    
+    <div class="container">
+        <header class="nav">
+            <h1>DailyPost</h1>        
+            <div class="links">
+                <a href="{% url 'user_home' %}">HOME</a>
+                <a href="{% url 'user_about' %}">ABOUT</a>
+            </div>
+        </header>   
+        {% block body %}
+        
+        {% endblock body %}
+        <footer>
+            <a href="https://github.com/jod35"><i class="fa fa-github fa-2x"></i></a>
+            <a href="www.facebook.com"><i class="fa fa-facebook fa-2x"></i></a>
+            <a href="www.twitter.com/jodathan35"><i class="fa fa-twitter fa-2x"></i></a>
+        </footer>
+    </div>
+</body>
+</html>
