@@ -11,6 +11,9 @@ body{
 *{
     font-family: 'Poppins', sans-serif;
 }
+#hamburger{
+    display: none;
+}
 a{
     text-decoration: none;
 }
@@ -31,6 +34,7 @@ a{
 }
 .links a{
     color: white;
+    text-transform: uppercase;
     font-weight: bold;
     margin: 20px;
 }
@@ -55,4 +59,36 @@ footer{
 footer a{
     color: white;
     margin: 20px;
+}
+
+@media(max-width:600px){
+  .nav{
+      background: white;
+      color: var(--blue);
+      padding: 5px;
+      box-shadow: 0px 0px 5px 0px black;
+  }
+
+   
+  .links{
+      display: none;
+  }
+
+  #hamburger{
+      display: block;
+      color: var(--blue);
+      padding: 20px;  
+  }
+
+  .container{
+      padding: 0;
+  }
+  footer{
+      background: var(--blue);
+    
+  }
+
+  footer a{
+      color: white;
+  }
 }
