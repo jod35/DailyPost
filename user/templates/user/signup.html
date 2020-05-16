@@ -1,5 +1,11 @@
 {% extends 'user/base.html' %}
 {% load static %} 
 {% block body %}
-   <h1>Login Page</h1>
+   <h1>Sign Up</h1>
+   
+   <form action="/signup/" class="site-form" method="POST">
+      {%csrf_token%}
+      {{form.as_p}}
+      <input type="submit" value="Sign Up">
+   </form>
 {% endblock body %}
