@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth.forms import UserCreationForm
-
+from .forms import UserRegisterForm
 # Create your views here.
 
 posts=[
@@ -36,10 +36,10 @@ def login(request):
 
 
 def signup(request):
-    form=UserCreationForm()
+    form=UserRegisterForm()
 
     if request.method == 'POST': #if we have a Post request
-        form=UserCreationForm(request.POST) #passing into a new instance
+        form=UserRegisterForm(request.POST) #passing into a new instance
 
         if form.is_valid():
             form.save()
@@ -47,9 +47,9 @@ def signup(request):
             return redirect('user_home')
 
     else:
-        form=UserCreationForm()
+        form=UserRegisterForm()
 
-        
+
     context={
         'form':form,
         'title':"Create an Account"
