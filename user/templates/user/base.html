@@ -8,6 +8,7 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="{% static 'user/css/main.css' %}" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
@@ -20,8 +21,8 @@
     {% endif %}
   </head>
   <body>
-    <div class="container">
-      <header class="nav">
+    <div class="container-main">
+      <header class="mynav">
         <h1>DailyPost</h1>
         <a href="#" id="hamburger"><i class="fa fa-bars fa-2x"></i></a>
         <a href="#" id="close"><i class="fa fa-times fa-2x"></i></a>
@@ -38,7 +39,11 @@
         <a href="{% url 'user_login' %}">LOGIN</a>
         <a href="{% url 'user_signup' %}">Sign Up</a>
       </div>
-      {% block body %} {% endblock body %}
+      <div class="main">
+      {% block body %}
+        
+      {% endblock body %}
+      </div>
       <footer>
         <a href="https://github.com/jod35"
           ><i class="fa fa-github fa-2x"></i
