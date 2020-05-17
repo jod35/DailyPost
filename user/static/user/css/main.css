@@ -108,6 +108,11 @@ footer a{
 
   }
 
+  .form{
+      width: 60%;
+      margin: auto;
+  }
+
   .container{
       padding: 0;
   }

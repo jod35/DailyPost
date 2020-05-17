@@ -4,9 +4,11 @@
 {% block body %}
    <h1>Sign Up</h1>
    
-   <form action="/signup/" class="site-form" method="POST">
-      {%csrf_token%}
-      {{form|crispy}}
-      <input type="submit" value="Sign Up" class="btn btn-primary">
-   </form>
+   <div class="form">
+      <form action="/signup/" class="site-form" method="POST">
+         {%csrf_token%}
+         {{form|crispy}}
+         <input type="submit" value="Sign Up" class="btn btn-primary">
+      </form>
+   </div>
 {% endblock body %}
