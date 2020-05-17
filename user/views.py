@@ -1,6 +1,7 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth.forms import UserCreationForm
 from .forms import UserRegisterForm
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 posts=[
@@ -30,9 +31,9 @@ def index(request):
 def about(request):
     return render(request,'user/about.html')
 
-
-# def login(request):
-#     return render(request,'user/login.html')
+@login_required
+def profile(request):
+    return render(request,'user/profile.html')
 
 
 def signup(request):
