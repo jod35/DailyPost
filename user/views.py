@@ -31,8 +31,8 @@ def about(request):
     return render(request,'user/about.html')
 
 
-def login(request):
-    return render(request,'user/login.html')
+# def login(request):
+#     return render(request,'user/login.html')
 
 
 def signup(request):
@@ -44,7 +44,7 @@ def signup(request):
         if form.is_valid():
             form.save()
             #login
-            return redirect('user_home')
+            return redirect('login')
 
     else:
         form=UserRegisterForm()

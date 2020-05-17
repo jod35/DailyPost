@@ -1,5 +1,14 @@
-{% extends 'user/base.html' %} 
+{% extends 'user/base.html' %}
 {% load static %} 
+{% load crispy_forms_tags %}
 {% block body %}
-   <h1>Login Page</h1>
+   <h1>Sign In</h1>
+   
+   <div class="form">
+      <form action="/login/" class="site-form" method="POST">
+         {%csrf_token%}
+         {{form|crispy}}
+         <input type="submit" value="Sign Up" class="btn btn-primary">
+      </form>
+   </div>
 {% endblock body %}
